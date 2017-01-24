@@ -1,0 +1,64 @@
+---
+extends: [airbnb, plugin:lodash/recommended]
+plugins: [lodash, mocha]
+parser: babel-eslint
+
+globals:
+    document: true
+    localStorage: true
+    window: true
+
+rules:
+    # Custom indenting
+    indent: [error, 4]
+    react/jsx-indent: [error, 4]
+
+    # Disabled on purpose
+    arrow-parens: off
+    consistent-return: off
+    import/no-extraneous-dependencies: off
+    import/no-unresolved: off
+    import/prefer-default-export: off
+    import/extensions: off
+    max-len: off
+    no-case-declarations: off
+    no-param-reassign: off
+    no-plusplus: off
+    no-underscore-dangle: off
+    object-property-newline: off
+    react/jsx-filename-extension: off
+
+    # Custom on purpose
+    react/prop-types:
+        - error
+        - ignore: [dispatch]
+
+    # Mocha rules
+    mocha/no-pending-tests: error
+    mocha/no-skipped-tests: error
+
+    # To be cleaned
+    class-methods-use-this: warn
+    import/no-named-as-default: warn
+    jsx-a11y/label-has-for: warn
+    jsx-a11y/no-static-element-interactions: warn
+    lodash/chain-style: warn
+    lodash/chaining: warn
+    lodash/matches-prop-shorthand: warn
+    lodash/prefer-constant: warn
+    lodash/prefer-flat-map: warn
+    lodash/prefer-lodash-chain: warn
+    lodash/prefer-lodash-method: warn
+    lodash/prefer-lodash-typecheck: warn
+    lodash/prefer-noop: warn
+    lodash/preferred-alias: warn
+    lodash/prop-shorthand: warn
+    no-lonely-if: warn
+    no-mixed-operators: warn
+    no-useless-return: warn
+    react/forbid-prop-types: warn
+    react/jsx-no-duplicate-props: warn
+    react/no-children-prop: warn
+    react/no-string-refs: warn
+    react/no-unescaped-entities: warn
+    react/no-unused-prop-types: warn
